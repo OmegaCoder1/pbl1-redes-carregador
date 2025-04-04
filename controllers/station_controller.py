@@ -2,7 +2,7 @@ import time
 import math
 
 class StationController:
-    def _init_(self):
+    def __init__(self):
         """Inicializa as estações de recarga disponíveis."""
         self.charging_stations = {
             "Posto 1": {"x": 2.0, "y": 3.0, "ocupado": False, "tempo_expiracao": None,"id": None, "reservation_data": None},
@@ -124,4 +124,4 @@ class StationController:
 #funcoes gerais:
 def calcular_distancia(x1, y1, x2, y2):
     """Calcula a distância Euclidiana entre dois pontos."""
-    return math.sqrt((x2 - x1) * 2 + (y2 - y1) * 2)
+    return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
